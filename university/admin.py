@@ -6,4 +6,4 @@ from .models import Student, Address
 
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
-    pass
+    fields = ['first_name','last_name','gender','birth_date','grade','registration_date','graduation_date','phone']
