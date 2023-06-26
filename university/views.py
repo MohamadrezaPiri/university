@@ -11,3 +11,5 @@ class StudentViewset(ModelViewSet):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter]
+    search_fields = ['last_name']
+
