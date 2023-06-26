@@ -4,6 +4,7 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import Student
 from .serializers import StudentSerializer
+from .filters import StudentFilters
 
 # Create your views here.
 
@@ -11,6 +12,7 @@ class StudentViewset(ModelViewSet):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    filterset_class = StudentFilters
     search_fields = ['last_name']
     ordering_fields = ['registration_date','graduation_date']
 
