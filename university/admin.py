@@ -9,3 +9,4 @@ class StudentAdmin(admin.ModelAdmin):
     list_display = ['first_name','last_name','birth_date','grade','registration_date','graduation_date','phone']
     list_filter = ['gender','grade']
     list_per_page = 10
+    search_fields = ['last_name']
