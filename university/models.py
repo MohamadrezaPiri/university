@@ -27,7 +27,7 @@ class Student(models.Model):
     birth_date = models.DateField()
     grade = models.CharField(choices=GRADE_CHOICES, max_length=1, default=GRADE_BACHLORE)
     registration_date = models.DateField()
-    graduation_date = models.DateField()
+    graduation_date = models.DateField(null=True, blank=True)
     phone = models.CharField(max_length=11)
 
 
