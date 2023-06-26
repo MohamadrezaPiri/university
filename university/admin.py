@@ -6,3 +6,7 @@ from .models import Student, Address
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(Address)
+class AddressAdmin(admin.ModelAdmin):
+    pass
