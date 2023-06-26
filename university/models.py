@@ -31,8 +31,4 @@ class Student(models.Model):
     phone = models.CharField(max_length=11)
 
 
-class Address(models.Model):
-    street = models.CharField(max_length=255)
-    city = models.CharField(max_length=255)
-    student = models.OneToOneField(Student, on_delete=models.CASCADE)
-   
+
