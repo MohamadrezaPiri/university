@@ -28,7 +28,8 @@ class Student(models.Model):
     registration_date = models.DateField()
     graduation_date = models.DateField(null=True, blank=True)
     address = models.TextField()
-    phone = models.CharField(max_length=11)
+    # phone = models.CharField(max_length=11)
+    phone = models.BigIntegerField(max_length=11)
 
 
 
